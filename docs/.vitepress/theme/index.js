@@ -1,6 +1,6 @@
 // .vitepress/theme/index.js
 import DefaultTheme from 'vitepress/theme';
-import Search from '../../components/Search.vue';
+import Search from '../components/Search.vue';
 import MyLayout from './MyLayout.vue';
 
 export default {
