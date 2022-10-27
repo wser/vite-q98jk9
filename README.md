@@ -1,3 +1,3 @@
-# vite-q98jk9
+# vitepress-customized
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/vite-q98jk9)
+[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/vitepress-customized)
