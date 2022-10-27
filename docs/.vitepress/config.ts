@@ -7,7 +7,7 @@ export default defineConfig({
   description: 'Vite & Vue powered static site generator.',
 
   themeConfig: {
-    siteTitle: 'Vidakovici',
+    siteTitle: 'Vitepress site title',
 
     nav: [
       { text: 'Example', link: '/example' },
