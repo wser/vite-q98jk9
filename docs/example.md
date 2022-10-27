@@ -1,15 +1,14 @@
 ---
-title: 'My Cool Document'
+title: 'About'
 ---
 
 # {{ $frontmatter.title }}
 
-<script setup>
-import Search from './components/Search.vue'
-
-</script>
+<Search />
 
 # VitePress 💙 StackBlitz
+
+Content, and everything else...
 
 Hi there :wave: This is a demo running VitePress within your **browser tab**!
 
@@ -24,5 +23,3 @@ VitePress uses Vite under the hood. This means:
 ## Markdown-Centered
 
 So you can focus more on writing. Powered by MarkdownIt. Comes with many [built-in extensions](https://vitepress.vuejs.org/guide/markdown), and you can use Vue features in Markdown too!
-
-<Search />

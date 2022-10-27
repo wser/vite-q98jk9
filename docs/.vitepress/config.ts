@@ -7,6 +7,8 @@ export default defineConfig({
   description: 'Vite & Vue powered static site generator.',
 
   themeConfig: {
+    siteTitle: 'Vidakovici',
+
     nav: [
       { text: 'Example', link: '/example' },
 
@@ -24,7 +26,7 @@ export default defineConfig({
 
     sidebar: [
       {
-        // text: 'Guide',
+        text: 'Menu',
         items: [
           { text: 'Example', link: '/example' },
           // ...
