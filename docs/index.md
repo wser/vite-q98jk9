@@ -3,7 +3,7 @@ title: Home
 layout: home
 
 hero:
-  name: Free static website!
+  name: Free static website!!
   text: Vite & Vue powered site.
   tagline: Simple, powerful, and performant. Meet the modern web pagess you've always wanted.
   actions:
