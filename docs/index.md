@@ -7,13 +7,10 @@ hero:
   text: Vite & Vue powered site.
   tagline: Simple, powerful, and performant. Meet the modern web pagess you've always wanted.
   actions:
-    - theme: brand
+    - theme: alt
       text: Get Started
       link: /example
-    - theme: alt
-      text: Vitepress
-      link: https://github.com/vuejs/vitepress
     - theme: brand
-      text: Visit LIVE
+      text: LIVE 
       link: https://wser.github.io/vitepress-customized/
 ---
