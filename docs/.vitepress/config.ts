@@ -8,7 +8,6 @@ export default defineConfig({
 
   base: '/vitepress-customized/',
 
-  //lastUpdated: true,
   cleanUrls: 'without-subfolders',
 
   head: [['meta', { name: 'theme-color', content: '#3c8772' }]],
@@ -21,8 +20,6 @@ export default defineConfig({
 
   themeConfig: {
     siteTitle: 'Freele',
-
-    lastUpdatedText: 'Updated Date',
 
     editLink: {
       pattern:
