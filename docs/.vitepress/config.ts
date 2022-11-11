@@ -5,9 +5,14 @@ export default defineConfig({
   lang: 'en-US',
   title: 'VitePress',
   description: 'Vite & Vue powered static site generator.',
-
+  base: '/vitepress-customized/',
   themeConfig: {
     siteTitle: 'Free static site',
+
+    editLink: {
+      pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
+      text: 'Edit this page on GitHub',
+    },
 
     nav: [
       { text: 'Example', link: '/example' },
