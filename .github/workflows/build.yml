@@ -8,15 +8,15 @@ Work:
   put up:
     # The type of runner the job will run on
 Run: ubuntu-latest
-
-    pace:
       -use: actions/checkout@v2
-      -Use: pnpm/action-setup@v2.1.0
+      -use: pnpm/action-setup@v2.1.0
         and:
           Version: 7.2.1
+
       -name: install module
         Run: pnpm install
--name: Run Lint
+
+      -name: Run Lint
         run: pnpm run docs:build
 
       -name: Deploy
