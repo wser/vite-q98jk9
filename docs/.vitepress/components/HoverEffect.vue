@@ -81,7 +81,7 @@
         </div>
       </div>
     </div>
-    <div class="card" ref="card" @mouseenter="hover">
+    <div class="card" ref="card">
       <div class="card-content">
         <div class="card-image">
           <i class="fa-duotone fa-otter"></i>
@@ -107,15 +107,17 @@ import { useMouse } from '@vueuse/core';
 const { x, y } = useMouse();
 
 // const cards = ref(null);
-// const card = ref(null);
+const card = ref(null);
 
 // const hover = false;
 //hover = false;
 
-const hover = (e) => {
-  this.$refs.card.style.setProperty('--mouse-x', `${x}px`);
-  this.$refs.card.style.setProperty('--mouse-y', `${y}px`);
-};
+// const hover = (e) => {
+///card.style('--mouse-x', `${x}px`);
+//   card.style.setProperty('--mouse-y', `${y}px`);
+// };
+
+// console.log(x, y);
 </script>
 
 <style scoped>
