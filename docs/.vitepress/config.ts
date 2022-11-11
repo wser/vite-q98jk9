@@ -8,8 +8,19 @@ export default defineConfig({
 
   base: '/vitepress-customized/',
 
+  //lastUpdated: true,
+  cleanUrls: 'without-subfolders',
+
+  head: [['meta', { name: 'theme-color', content: '#3c8772' }]],
+
+  markdown: {
+    headers: {
+      level: [0, 0],
+    },
+  },
+
   themeConfig: {
-    siteTitle: 'Free static site',
+    siteTitle: 'Freele',
 
     editLink: {
       pattern:
