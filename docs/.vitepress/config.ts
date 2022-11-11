@@ -27,6 +27,7 @@ export default defineConfig({
     sidebar: [
       {
         text: 'Menu',
+        collapsible: true,
         items: [
           { text: 'Example', link: '/example' },
           // ...
