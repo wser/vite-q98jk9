@@ -7,6 +7,6 @@ const { Layout } = DefaultTheme;
 
 <template>
   <Layout>
-    <template #nav-bar-title-after> <Search /> </template>
+    <template #nav-bar-title-after> <Search /></template>
   </Layout>
 </template>
