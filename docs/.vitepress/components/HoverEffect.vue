@@ -1,7 +1,12 @@
 <template>
   <h2>Mouse Hover effect</h2>
   <div id="cards" ref="cards">
-    <div class="card" ref="card" @mousemove.native="hover">
+    <div
+      class="card"
+      ref="card"
+      @mouseenter="hover = true"
+      @mouseleave="hover = false"
+    >
       <div class="card-content">
         <div class="card-image">
           <i class="fa-duotone fa-apartment"></i>
@@ -17,7 +22,12 @@
         </div>
       </div>
     </div>
-    <div class="card" ref="card" @mousemove.native="hover">
+    <div
+      class="card"
+      ref="card"
+      @mouseenter="hover = true"
+      @mouseleave="hover = false"
+    >
       <div class="card-content">
         <div class="card-image">
           <i class="fa-duotone fa-unicorn"></i>
@@ -33,7 +43,12 @@
         </div>
       </div>
     </div>
-    <div class="card" ref="card" @mousemove.native="hover">
+    <div
+      class="card"
+      ref="card"
+      @mouseenter="hover = true"
+      @mouseleave="hover = false"
+    >
       <div class="card-content">
         <div class="card-image">
           <i class="fa-duotone fa-blender-phone"></i>
@@ -49,7 +64,12 @@
         </div>
       </div>
     </div>
-    <div class="card" ref="card" @mousemove.native="hover">
+    <div
+      class="card"
+      ref="card"
+      @mouseenter="hover = true"
+      @mouseleave="hover = false"
+    >
       <div class="card-content">
         <div class="card-image">
           <i class="fa-duotone fa-person-to-portal"></i>
@@ -65,7 +85,12 @@
         </div>
       </div>
     </div>
-    <div class="card" ref="card" @mousemove.native="hover">
+    <div
+      class="card"
+      ref="card"
+      @mouseenter="hover = true"
+      @mouseleave="hover = false"
+    >
       <div class="card-content">
         <div class="card-image">
           <i class="fa-duotone fa-person-from-portal"></i>
@@ -81,7 +106,13 @@
         </div>
       </div>
     </div>
-    <div class="card" ref="card" @mousemove.native="hover">
+    <div
+      class="card"
+      ref="card"
+      @mouseenter="hover = true"
+      @mouseleave="hover = false"
+      :class="{ 'div-hover': hover }"
+    >
       <div class="card-content">
         <div class="card-image">
           <i class="fa-duotone fa-otter"></i>
@@ -101,26 +132,28 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref } from 'vue';
 
 const cards = ref(null);
 const card = ref(null);
 
-const hover = (e) => {
-  const rect = card.getBoundingClientRect(),
-    x = e.clientX - rect.left,
-    y = e.clientY - rect.top;
+const hover = false;
+//hover = false;
 
-  card.style.setProperty('--mouse-x', `${x}px`);
-  card.style.setProperty('--mouse-y', `${y}px`);
-};
+// const hover = (e) => {
+//   const rect = card.getBoundingClientRect(),
+//     x = e.clientX - rect.left,
+//     y = e.clientY - rect.top;
 
-// onMounted(() => {
-//   hover();
-// });
+//   card.style.setProperty('--mouse-x', `${x}px`);
+//   card.style.setProperty('--mouse-y', `${y}px`);
+// };
 </script>
 
 <style scoped>
+.div-hover {
+  background-color: yellow !;
+}
 :root {
   --bg-color: rgb(20, 20, 20);
   --card-color: rgb(23, 23, 23);
