@@ -4,8 +4,6 @@ title: 'About'
 
 # {{ $frontmatter.title }}
 
-<Search />
-
 # VitePress 💙 StackBlitz
 
 Content, and everything else...
