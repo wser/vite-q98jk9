@@ -9,7 +9,6 @@ Work:
     # The type of runner the job will run on
 Run: ubuntu-latest
 
-# Steps represents a sequence of tasks that will be performed as part of a job
     pace:
       -use: actions/checkout@v2
       -Use: pnpm/action-setup@v2.1.0
