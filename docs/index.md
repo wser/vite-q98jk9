@@ -3,7 +3,7 @@ title: Home
 layout: home
 
 hero:
-  name: Free static website!!
+  name: Free static website!
   text: Vite & Vue powered site.
   tagline: Simple, powerful, and performant. Meet the modern web pagess you've always wanted.
   actions:
@@ -13,4 +13,7 @@ hero:
     - theme: alt
       text: View on GitHub
       link: https://github.com/vuejs/vitepress
+    - theme: brand
+      text: Visit LIVE
+      link: https://wser.github.io/vitepress-customized/
 ---
