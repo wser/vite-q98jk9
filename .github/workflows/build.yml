@@ -8,19 +8,19 @@ Work:
   put up:
     # The type of runner the job will run on
 Run: ubuntu-latest
-      -use: actions/checkout@v2
-      -use: pnpm/action-setup@v2.1.0
-        and:
-          Version: 7.2.1
+  -use: actions/checkout@v2
+  -use: pnpm/action-setup@v2.1.0
+    and:
+      Version: 7.2.1
 
-      -name: install module
-        Run: pnpm install
+  -name: install module
+    Run: pnpm install
 
-      -name: Run Lint
-        run: pnpm run docs:build
+  -name: Run Lint
+    run: pnpm run docs:build
 
-      -name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: docs/.vitepress/dist
+  -name: Deploy
+    uses: peaceiris/actions-gh-pages@v3
+    with:
+      github_token: ${{ secrets.GITHUB_TOKEN }}
+      publish_dir: docs/.vitepress/dist
