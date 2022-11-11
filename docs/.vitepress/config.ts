@@ -22,6 +22,8 @@ export default defineConfig({
   themeConfig: {
     siteTitle: 'Freele',
 
+    lastUpdatedText: 'Updated Date',
+
     editLink: {
       pattern:
         'https://github.com/wser/vitepress-customized/tree/main/docs/:path',

@@ -11,7 +11,7 @@ hero:
       text: Get Started
       link: /example
     - theme: alt
-      text: View on GitHub
+      text: Vitepress
       link: https://github.com/vuejs/vitepress
     - theme: brand
       text: Visit LIVE

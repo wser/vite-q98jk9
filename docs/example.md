@@ -1,5 +1,6 @@
 ---
 title: 'About'
+lastUpdated: true
 ---
 
 # {{ $frontmatter.title }}
