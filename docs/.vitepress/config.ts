@@ -6,9 +6,6 @@ export default defineConfig({
   title: 'VitePress',
   description: 'Vite & Vue powered static site generator.',
 
-  lastUpdated: true,
-  cleanUrls: 'without-subfolders',
-
   base: '/vitepress-customized/',
 
   themeConfig: {
@@ -29,30 +26,36 @@ export default defineConfig({
       copyright: 'Copyright © 2022-present [wser]',
     },
 
-    nav: [
-      { text: 'Example', link: '/example' },
+    nav: nav(),
 
-      {
-        text: 'Dropdown Menu',
-        items: [
-          { text: 'Item A', link: '/item-1' },
-          { text: 'Item B', link: '/item-2' },
-          { text: 'Item C', link: '/item-3' },
-        ],
-      },
-
-      // ...
-    ],
-
-    sidebar: [
-      {
-        text: 'Menu',
-        collapsible: true,
-        items: [
-          { text: 'Example', link: '/example' },
-          // ...
-        ],
-      },
-    ],
+    sidebar: sidebar(),
   },
 });
+
+function nav() {
+  return [
+    { text: 'Example', link: '/example' },
+
+    {
+      text: 'Dropdown Menu',
+      items: [
+        { text: 'Item A', link: '/item-1' },
+        { text: 'Item B', link: '/item-2' },
+        { text: 'Item C', link: '/item-3' },
+      ],
+    },
+  ];
+}
+
+function sidebar() {
+  return [
+    {
+      text: 'Menu',
+      collapsible: true,
+      items: [
+        { text: 'Example', link: '/example' },
+        // ...
+      ],
+    },
+  ];
+}
