@@ -1,7 +1,7 @@
 <template>
   <h2>Mouse Hover effect</h2>
 
-  <div class="grid-container" @mouseenter="mMove">
+  <div class="grid-container">
     <div class="mask top"></div>
     <div class="mask left"></div>
     <div class="content">
@@ -54,25 +54,21 @@
     <div class="mask right"></div>
     <div class="mask bottom"></div>
   </div>
-  <div id="light" ref="light"></div>
+  <div id="light" ref="light" :class="transl"></div>
+  <p>x: {{ x }} y: {{ y }}</p>
 </template>
 
 <script setup>
-// import { ref, computed } from 'vue';
-// import { useMouse } from '@vueuse/core';
+import { ref, reactive } from 'vue';
+import { useMouse } from '@vueuse/core';
 
-// const { x, y } = useMouse();
-// const light = ref(null);
+const { x, y } = useMouse({ touch: false });
+const light = ref(null);
 
-// const mMove = computed(() => {
-//   light.top = y + 'px';
-//   light.left = x + 'px';
-// });
-
-// const classObject = computed(() => ({
-//   'light.left': x + 'px',
-//   'light.top': y + 'px',
-// }));
+const transl = reactive({
+  top: y + 'px',
+  left: x + 'px',
+});
 
 //themes
 // const themes = document.querySelectorAll('.themes li');

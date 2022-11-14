@@ -2,7 +2,7 @@
 import DefaultTheme from 'vitepress/theme';
 //import Search from '../components/Search.vue';
 import HoverEffect from '../components/HoverEffect.vue';
-import MyLayout from './MyLayout.vue';
+//import MyLayout from './MyLayout.vue';
 
 export default {
   ...DefaultTheme,
@@ -13,5 +13,5 @@ export default {
   },
   // override the Layout with a wrapper component that
   // injects the slots
-  Layout: MyLayout,
+  //Layout: MyLayout,
 };
