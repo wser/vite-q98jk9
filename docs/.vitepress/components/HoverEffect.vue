@@ -1,326 +1,202 @@
 <template>
   <h2>Mouse Hover effect</h2>
-  <div id="cards" ref="cards">
-    <div class="card" ref="card" @mouseenter="hover">
-      <div class="card-content">
-        <div class="card-image">
-          <i class="fa-duotone fa-apartment"></i>
+
+  <div class="grid-container" @mouseenter="mMove">
+    <div class="mask top"></div>
+    <div class="mask left"></div>
+    <div class="content">
+      <div class="cal">
+        <div class="day" tabindex="0">1</div>
+        <div class="day" tabindex="0">2</div>
+        <div class="day" tabindex="0">3</div>
+        <div class="day" tabindex="0">4</div>
+        <div class="day" tabindex="0">5</div>
+        <div class="day" tabindex="0">6</div>
+        <div class="day" tabindex="0">7</div>
+        <div class="day" tabindex="0">8</div>
+        <div class="day" tabindex="0">9</div>
+        <div class="day" tabindex="0">10</div>
+        <div class="day" tabindex="0">11</div>
+        <div class="day" tabindex="0">12</div>
+        <div class="day" tabindex="0">13</div>
+        <div class="day" tabindex="0">14</div>
+        <div class="day" tabindex="0">15</div>
+        <div class="day" tabindex="0">16</div>
+        <div class="day" tabindex="0">17</div>
+        <div class="day" tabindex="0">18</div>
+        <div class="day" tabindex="0">19</div>
+        <div class="day" tabindex="0">20</div>
+        <div class="day" tabindex="0">21</div>
+        <div class="day" tabindex="0">22</div>
+        <div class="day" tabindex="0">23</div>
+        <div class="day" tabindex="0">24</div>
+        <div class="day" tabindex="0">25</div>
+        <div class="day" tabindex="0">26</div>
+        <div class="day" tabindex="0">27</div>
+        <div class="day" tabindex="0">28</div>
+        <div class="day" tabindex="0">29</div>
+        <div class="day" tabindex="0">30</div>
+        <div class="day" tabindex="0">31</div>
+        <div class="day">
+          <div class="oom">1</div>
         </div>
-        <div class="card-info-wrapper">
-          <div class="card-info">
-            <i class="fa-duotone fa-apartment"></i>
-            <div class="card-info-title">
-              <h3>Apartments</h3>
-              <h4>Places to be apart. Wait, what?</h4>
-            </div>
-          </div>
+        <div class="day">
+          <div class="oom">2</div>
         </div>
-      </div>
-    </div>
-    <div class="card" ref="card" @mouseenter="hover">
-      <div class="card-content">
-        <div class="card-image">
-          <i class="fa-duotone fa-unicorn"></i>
+        <div class="day">
+          <div class="oom">3</div>
         </div>
-        <div class="card-info-wrapper">
-          <div class="card-info">
-            <i class="fa-duotone fa-unicorn"></i>
-            <div class="card-info-title">
-              <h3>Unicorns</h3>
-              <h4>A single corn. Er, I mean horn.</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card" ref="card" @mouseenter="hover">
-      <div class="card-content">
-        <div class="card-image">
-          <i class="fa-duotone fa-blender-phone"></i>
-        </div>
-        <div class="card-info-wrapper">
-          <div class="card-info">
-            <i class="fa-duotone fa-blender-phone"></i>
-            <div class="card-info-title">
-              <h3>Blender Phones</h3>
-              <h4>These absolutely deserve to exist.</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card" ref="card" @mouseenter="hover">
-      <div class="card-content">
-        <div class="card-image">
-          <i class="fa-duotone fa-person-to-portal"></i>
-        </div>
-        <div class="card-info-wrapper">
-          <div class="card-info">
-            <i class="fa-duotone fa-person-to-portal"></i>
-            <div class="card-info-title">
-              <h3>Adios</h3>
-              <h4>See you...</h4>
-            </div>
-          </div>
+        <div class="day">
+          <div class="oom">4</div>
         </div>
       </div>
     </div>
-    <div class="card" ref="card" @mouseenter="hover">
-      <div class="card-content">
-        <div class="card-image">
-          <i class="fa-duotone fa-person-from-portal"></i>
-        </div>
-        <div class="card-info-wrapper">
-          <div class="card-info">
-            <i class="fa-duotone fa-person-from-portal"></i>
-            <div class="card-info-title">
-              <h3>I mean hello</h3>
-              <h4>...over here.</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card" ref="card">
-      <div class="card-content">
-        <div class="card-image">
-          <i class="fa-duotone fa-otter"></i>
-        </div>
-        <div class="card-info-wrapper">
-          <div class="card-info">
-            <i class="fa-duotone fa-otter"></i>
-            <div class="card-info-title">
-              <h3>Otters</h3>
-              <h4>Look at me, imma cute lil fella.</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div class="mask right"></div>
+    <div class="mask bottom"></div>
   </div>
+  <div id="light" ref="light"></div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import { useMouse } from '@vueuse/core';
+// import { ref, computed } from 'vue';
+// import { useMouse } from '@vueuse/core';
 
-const { x, y } = useMouse();
+// const { x, y } = useMouse();
+// const light = ref(null);
 
-// const cards = ref(null);
-const card = ref(null);
+// const mMove = computed(() => {
+//   light.top = y + 'px';
+//   light.left = x + 'px';
+// });
 
-// const hover = false;
-//hover = false;
+// const classObject = computed(() => ({
+//   'light.left': x + 'px',
+//   'light.top': y + 'px',
+// }));
 
-// const hover = (e) => {
-///card.style('--mouse-x', `${x}px`);
-//   card.style.setProperty('--mouse-y', `${y}px`);
-// };
-
-// console.log(x, y);
+//themes
+// const themes = document.querySelectorAll('.themes li');
+// for (let i = 0; i < themes.length; ++i) {
+//   themes[i].addEventListener('click', (e) => {
+//     document.documentElement.classList = [e.target.classList.value];
+//   });
+// }
 </script>
 
 <style scoped>
-:root {
-  --bg-color: rgb(20, 20, 20);
-  --card-color: rgb(23, 23, 23);
+/* body,
+html {
+  height: 100%;
+  margin: 0;
 }
 
 body {
-  align-items: center;
-  background-color: var(--bg-color);
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  margin: 0px;
   overflow: hidden;
-  padding: 0px;
+  font-family: courier;
+  font-weight: bold;
+} */
+
+.cal {
+  z-index: 5;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
 }
 
-#cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  max-width: 916px;
-  width: calc(100% - 20px);
-}
-
-#cards:hover > .card::after {
-  opacity: 1;
-}
-
-.card {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  cursor: pointer;
-  display: flex;
-  height: 260px;
-  flex-direction: column;
+.day {
+  user-select: none;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 0.75rem;
   position: relative;
-  width: 300px;
+  z-index: 9;
+  cursor: pointer;
 }
-
-.card:hover::before {
-  opacity: 1;
+.day:focus {
+  outline: none;
 }
-
-.card::before,
-.card::after {
-  border-radius: inherit;
+.day:after {
+  transition: all 0.4s;
   content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+#light {
+  position: absolute;
+  width: 15rem;
+  height: 15rem;
+  z-index: 4;
+  border-radius: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.grid-container {
+  display: grid;
   height: 100%;
-  left: 0px;
-  opacity: 0;
-  position: absolute;
-  top: 0px;
-  transition: opacity 500ms;
-  width: 100%;
+  grid-template-columns: 1fr 401px 1fr;
+  grid-template-rows: 0.5fr 250px 1fr;
+  grid-gap: 0px 0px;
+  grid-template-areas: 'top top top' 'left content right' 'bottom bottom bottom';
 }
 
-.card::before {
-  background: radial-gradient(
-    800px circle at var(--mouse-x) var(--mouse-y),
-    rgba(255, 255, 255, 0.06),
-    transparent 40%
-  );
-  z-index: 3;
+.top {
+  grid-area: top;
 }
 
-.card::after {
-  background: radial-gradient(
-    600px circle at var(--mouse-x) var(--mouse-y),
-    rgba(255, 255, 255, 0.4),
-    transparent 40%
-  );
-  z-index: 1;
+.left {
+  grid-area: left;
 }
 
-.card > .card-content {
-  background-color: var(--card-color);
-  border-radius: inherit;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  inset: 1px;
-  padding: 10px;
-  position: absolute;
-  z-index: 2;
+.content {
+  grid-area: content;
 }
 
-/* -- ↓ ↓ ↓ extra card content styles ↓ ↓ ↓ -- */
-
-h1,
-h2,
-h3,
-h4,
-span {
-  color: rgb(240, 240, 240);
-  font-family: 'Rubik', sans-serif;
-  font-weight: 400;
-  margin: 0px;
+.right {
+  grid-area: right;
 }
 
-i {
-  color: rgb(240, 240, 240);
+.bottom {
+  grid-area: bottom;
 }
 
-.card-image {
-  align-items: center;
-  display: flex;
-  height: 140px;
-  justify-content: center;
-  overflow: hidden;
+.mask {
+  position: relative;
+  z-index: 99;
 }
 
-.card-image > i {
-  font-size: 6em;
-  opacity: 0.25;
+.day {
+  transition: all 0.2s;
 }
-
-.card-info-wrapper {
-  align-items: center;
-  display: flex;
-  flex-grow: 1;
-  justify-content: flex-start;
-  padding: 0px 20px;
+.day:focus {
+  background-color: #ccc;
 }
-
-.card-info {
-  align-items: flex-start;
-  display: flex;
-  gap: 10px;
+.day:nth-child(10):focus {
+  transform: translateY(-0.35rem);
 }
-
-.card-info > i {
-  font-size: 1em;
-  height: 20px;
-  line-height: 20px;
+.day:nth-child(13) {
+  transition-duration: 0.6s;
 }
-
-.card-info-title > h3 {
-  font-size: 1.1em;
-  line-height: 20px;
+.day:nth-child(13):focus {
+  transform: rotate(360deg);
 }
-
-.card-info-title > h4 {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 0.85em;
-  margin-top: 8px;
+.day:nth-child(20) {
+  transition-duration: 0.6s;
 }
-
-/* -- ↓ ↓ ↓ some responsiveness ↓ ↓ ↓ -- */
-
-@media (max-width: 1000px) {
-  body {
-    align-items: flex-start;
-    overflow: auto;
-  }
-
-  #cards {
-    max-width: 1000px;
-    padding: 10px 0px;
-  }
-
-  .card {
-    flex-shrink: 1;
-    width: calc(50% - 4px);
-  }
+.day:nth-child(20):focus {
+  transform: rotateY(180deg);
 }
-
-@media (max-width: 500px) {
-  .card {
-    height: 180px;
-  }
-
-  .card-image {
-    height: 80px;
-  }
-
-  .card-image > i {
-    font-size: 3em;
-  }
-
-  .card-info-wrapper {
-    padding: 0px 10px;
-  }
-
-  .card-info > i {
-    font-size: 0.8em;
-  }
-
-  .card-info-title > h3 {
-    font-size: 0.9em;
-  }
-
-  .card-info-title > h4 {
-    font-size: 0.8em;
-    margin-top: 4px;
-  }
+.day:nth-child(24) {
+  transition-duration: 0.4s;
 }
-
-@media (max-width: 320px) {
-  .card {
-    width: 100%;
-  }
+.day:nth-child(24):focus {
+  z-index: 19;
+  transform: rotate(10deg) scale(1.1);
+}
+.day:nth-child(29) {
+  transition-duration: 0.4s;
+}
+.day:nth-child(29):focus {
+  z-index: 19;
+  transform: rotate(10deg) translate3d(0.25rem, -0.3rem, 2rem);
 }
 </style>
