@@ -54,16 +54,14 @@
     <div class="mask right"></div>
     <div class="mask bottom"></div>
   </div>
-  <div id="light" ref="light" :style="`left: ${x}px, top: ${y}px`"></div>
+  <div id="light" :style="`left: ${x}px; top: ${y}px;`"></div>
   <p>x: {{ x }} y: {{ y }}</p>
 </template>
 
 <script setup>
-import { ref } from 'vue';
 import { useMouse } from '@vueuse/core';
 
 const { x, y } = useMouse({ touch: false });
-const light = ref(null);
 </script>
 
 <style scoped>
@@ -111,6 +109,7 @@ body {
   z-index: 4;
   border-radius: 50%;
   transform: translate3d(-50%, -50%, 0);
+  /* background-color: white; */
 }
 
 .grid-container {
@@ -145,6 +144,46 @@ body {
 .mask {
   position: relative;
   z-index: 99;
+}
+
+.theme-default {
+  background-color: #292c33;
+  color: #eee;
+}
+.theme-default .mask {
+  background: #292c33;
+}
+.theme-default .oom {
+  color: rgba(238, 238, 238, 0.4);
+}
+.theme-default #light {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(238, 238, 238, 0.5) 0%,
+    rgba(238, 238, 238, 0) 50%
+  );
+}
+.theme-default .day {
+  border: 2px solid #292c33;
+}
+.theme-default .day:after {
+  background-color: #292c33;
+  top: 2px;
+  bottom: 2px;
+  right: 2px;
+  left: 2px;
+}
+.theme-default .day:not(.oom):hover {
+  background-color: #eee;
+}
+.theme-default .day:not(.oom):hover:after {
+  background-color: #40444f;
+}
+.theme-default .themes {
+  background-color: #292c33;
+}
+.theme-default .theme-default {
+  border-color: #fff;
 }
 
 .day {
