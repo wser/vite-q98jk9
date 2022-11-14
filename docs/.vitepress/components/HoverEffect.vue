@@ -54,29 +54,16 @@
     <div class="mask right"></div>
     <div class="mask bottom"></div>
   </div>
-  <div id="light" ref="light" :class="transl"></div>
+  <div id="light" ref="light" :style="`left: ${x}px, top: ${y}px`"></div>
   <p>x: {{ x }} y: {{ y }}</p>
 </template>
 
 <script setup>
-import { ref, reactive } from 'vue';
+import { ref } from 'vue';
 import { useMouse } from '@vueuse/core';
 
 const { x, y } = useMouse({ touch: false });
 const light = ref(null);
-
-const transl = reactive({
-  top: y + 'px',
-  left: x + 'px',
-});
-
-//themes
-// const themes = document.querySelectorAll('.themes li');
-// for (let i = 0; i < themes.length; ++i) {
-//   themes[i].addEventListener('click', (e) => {
-//     document.documentElement.classList = [e.target.classList.value];
-//   });
-// }
 </script>
 
 <style scoped>
@@ -85,12 +72,12 @@ html {
   height: 100%;
   margin: 0;
 }
-
+*/
 body {
   overflow: hidden;
   font-family: courier;
   font-weight: bold;
-} */
+}
 
 .cal {
   z-index: 5;
