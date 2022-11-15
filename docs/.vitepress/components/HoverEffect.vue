@@ -136,8 +136,8 @@ const { x, y } = useMouse();
 }
 
 .theme-default {
-  /* background-color: #292c33; */
-  /* color: #eee; */
+  background-color: #292c33;
+  color: #eee;
 }
 .theme-default .mask {
   background: #292c33;
@@ -172,6 +172,46 @@ const { x, y } = useMouse();
   background-color: #292c33;
 }
 .theme-default .theme-default {
+  border-color: #fff;
+}
+
+.theme-2 {
+  background-color: #233b23;
+  color: #bada55;
+}
+.theme-2 .mask {
+  background: #233b23;
+}
+.theme-2 .oom {
+  color: rgba(186, 218, 85, 0.4);
+}
+.theme-2 #light {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(186, 218, 85, 0.5) 0%,
+    rgba(186, 218, 85, 0) 50%
+  );
+}
+.theme-2 .day {
+  border: 2px solid #233b23;
+}
+.theme-2 .day:after {
+  background-color: #233b23;
+  top: 3px;
+  bottom: 3px;
+  right: 3px;
+  left: 3px;
+}
+.theme-2 .day:not(.oom):hover {
+  background-color: #bada55;
+}
+.theme-2 .day:not(.oom):hover:after {
+  background-color: #1a2b1a;
+}
+.theme-2 .themes {
+  background-color: #233b23;
+}
+.theme-2 .theme-2 {
   border-color: #fff;
 }
 
