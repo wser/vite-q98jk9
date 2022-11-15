@@ -67,6 +67,10 @@ const { x, y } = useMouse();
 </script>
 
 <style scoped>
+.main {
+  height: 100%;
+  margin: 0;
+}
 .cal {
   z-index: 5;
   display: grid;
@@ -98,7 +102,7 @@ const { x, y } = useMouse();
   height: 15rem;
   z-index: 4;
   border-radius: 50%;
-  transform: translate3d(-60%, -100%, 0);
+  transform: translate3d(-50%, -50%, 0);
 }
 
 .grid-container {
