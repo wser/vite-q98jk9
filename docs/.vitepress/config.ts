@@ -64,6 +64,7 @@ function sidebar() {
       collapsible: true,
       items: [
         { text: 'Example', link: '/example' },
+        { text: 'Godot', link: '/godot' },
         // ...
       ],
     },
